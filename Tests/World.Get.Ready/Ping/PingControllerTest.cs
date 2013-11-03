@@ -4,16 +4,16 @@ using Yose.Controllers;
 
 namespace Tests
 {
-    [TestFixture()]
+    [TestFixture]
     public class PingControllerTest
     {
-        [Test()]
+        [Test]
         public void ReturnsJson()
         {
             Assert.That(new PingController().Index(), Is.InstanceOf<JsonResult>());
         }
 
-        [Test()]
+        [Test]
         public void ReturnsTheValueExpectedByTheGame()
         {
             var expected = new JsonResult { Data = new { alive = true } }.Data;
