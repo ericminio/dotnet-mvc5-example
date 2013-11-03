@@ -1,0 +1,6 @@
+/Users/eric/Projects/yose-dotnet-mvc3/Tests/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/Users/eric/Projects/yose-dotnet-mvc3/Tests/bin/Debug/Tests.dll.mdb
+/Users/eric/Projects/yose-dotnet-mvc3/Tests/bin/Debug/Tests.dll
+/Users/eric/Projects/yose-dotnet-mvc3/Tests/obj/Debug/Tests.dll
+/Users/eric/Projects/yose-dotnet-mvc3/Tests/obj/Debug/Tests.dll.mdb
+/Users/eric/Projects/yose-dotnet-mvc3/Tests/bin/Debug/nunit.framework.dll
