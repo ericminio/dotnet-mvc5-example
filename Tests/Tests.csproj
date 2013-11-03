@@ -63,7 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="TddReadyTest.cs" />
-    <Compile Include="PingControllerTest.cs" />
+    <Compile Include="World.Get.Ready\Ping\PingControllerTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -73,5 +73,9 @@
       <Project>{6796C25C-9DB3-4023-9F7A-A1D890CD5586}</Project>
       <Name>Yose</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="World.Get.Ready\" />
+    <Folder Include="World.Get.Ready\Ping\" />
   </ItemGroup>
 </Project>
