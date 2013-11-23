@@ -1,4 +1,5 @@
-bin
-test-results
-*.userprefs
-
+[B|b]in/
+obj/
+TestResults/
+*.suo
+*.user
