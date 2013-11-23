@@ -2,10 +2,10 @@ using NUnit.Framework;
 
 namespace Tests
 {
-    [TestFixture()]
+    [TestFixture]
     public class TddReadyTest
     {
-        [Test()]
+        [Test]
         public void TestEnvironment()
         {
             Assert.That(1 + 1, Is.EqualTo(2));
