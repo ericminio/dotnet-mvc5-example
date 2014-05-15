@@ -3,3 +3,6 @@ obj/
 TestResults/
 *.suo
 *.user
+test-results
+*.userprefs
+
