@@ -5,4 +5,5 @@ TestResults/
 *.user
 test-results
 *.userprefs
+TestResult.xml
 
