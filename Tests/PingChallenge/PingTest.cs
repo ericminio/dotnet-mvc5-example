@@ -1,4 +1,3 @@
-using System;
 using NUnit.Framework;
 using Yose.PingChallenge;
 

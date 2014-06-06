@@ -1,5 +1,3 @@
-using System;
-
 namespace Yose.PingChallenge
 {
 	public class Ping : ICanAnswerPingRequest
