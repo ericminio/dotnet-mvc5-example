@@ -72,10 +72,14 @@
     <Reference Include="NUnit.VisualStudio.TestAdapter">
       <HintPath>..\packages\NUnitTestAdapter.1.0\lib\NUnit.VisualStudio.TestAdapter.dll</HintPath>
     </Reference>
+    <Reference Include="NSubstitute">
+      <HintPath>..\packages\NSubstitute.1.7.2.0\lib\NET45\NSubstitute.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="TddReadyTest.cs" />
-    <Compile Include="World.Get.Ready\Ping\PingControllerTest.cs" />
+    <Compile Include="Controllers\PingControllerTest.cs" />
+    <Compile Include="PingChallenge\PingTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -87,7 +91,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="World.Get.Ready\" />
-    <Folder Include="World.Get.Ready\Ping\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="PingChallenge\" />
   </ItemGroup>
 </Project>

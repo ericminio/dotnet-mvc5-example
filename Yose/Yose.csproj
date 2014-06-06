@@ -62,6 +62,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Controllers\PingController.cs" />
+    <Compile Include="PingChallenge\Ping.cs" />
+    <Compile Include="PingChallenge\ICanAnswerPingRequest.cs" />
+    <Compile Include="PingChallenge\AliveResponse.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
@@ -77,4 +80,7 @@
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
+  <ItemGroup>
+    <Folder Include="PingChallenge\" />
+  </ItemGroup>
 </Project>
