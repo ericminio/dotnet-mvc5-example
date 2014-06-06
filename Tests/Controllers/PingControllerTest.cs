@@ -21,7 +21,7 @@ namespace Tests
 		public void AsksForHelpToSomeoneWoCanAnswerPing()
 		{
 			var mock = Substitute.For<ICanAnswerPingRequest> ();
-			controller.Ping = mock;
+			controller.Worker = mock;
 			controller.Index();
 
 			mock.Received().Response();
@@ -32,7 +32,7 @@ namespace Tests
 		{
 			var mock = Substitute.For<ICanAnswerPingRequest> ();
 			mock.Response().Returns(new { any = "value" });
-			controller.Ping = mock;
+			controller.Worker = mock;
 
 			Assert.That(controller.Index(), Is.InstanceOf<JsonResult>());
 		}
@@ -40,7 +40,7 @@ namespace Tests
 		[Test]
 		public void UsesThePingImplementation()
 		{
-			Assert.That (controller.Ping, Is.InstanceOf<Ping> ());
+			Assert.That (controller.Worker, Is.InstanceOf<Pong> ());
 		}
     }
 }

@@ -1,6 +1,6 @@
 namespace Yose.PingChallenge
 {
-	public class Ping : ICanAnswerPingRequest
+	public class Pong : ICanAnswerPingRequest
 	{
 		public object Response ()
 		{

@@ -5,11 +5,11 @@ namespace Yose.Controllers
 {
     public class PingController : Controller
     {
-		public ICanAnswerPingRequest Ping = new Ping();
+		public ICanAnswerPingRequest Worker = new Pong();
 
         public ActionResult Index()
         {
-			return Json(Ping.Response(), JsonRequestBehavior.AllowGet);
+			return Json(Worker.Response(), JsonRequestBehavior.AllowGet);
         }
     }
 }

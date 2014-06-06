@@ -6,12 +6,12 @@ namespace Tests.PingChallenge
 	[TestFixture]
 	public class PingTest
 	{
-		private Ping ping;
+		private Pong ping;
 
 		[SetUp]
 		public void ThisRoute()
 		{
-			ping = new Ping ();
+			ping = new Pong ();
 		}
 
 		[Test]
