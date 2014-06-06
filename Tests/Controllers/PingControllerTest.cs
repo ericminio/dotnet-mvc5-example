@@ -9,38 +9,38 @@ namespace Tests
     [TestFixture]
     public class PingControllerTest
     {
-		PingController controller;
+        PingController controller;
 
-		[SetUp]
-		public void ThisController()
-		{
-			controller = new PingController();
-		}
+        [SetUp]
+        public void ThisController()
+        {
+            controller = new PingController();
+        }
 
-		[Test]
-		public void AsksForHelpToSomeoneWoCanAnswerPing()
-		{
-			var mock = Substitute.For<ICanAnswerPingRequest> ();
-			controller.Worker = mock;
-			controller.Index();
+        [Test]
+        public void AsksForHelpToSomeoneWoCanAnswerPing()
+        {
+            var mock = Substitute.For<ICanAnswerPingRequest> ();
+            controller.Worker = mock;
+            controller.Index();
 
-			mock.Received().Response();
-		}
+            mock.Received().Response();
+        }
 
-		[Test]
-		public void ReturnsJson()
-		{
-			var mock = Substitute.For<ICanAnswerPingRequest> ();
-			mock.Response().Returns(new { any = "value" });
-			controller.Worker = mock;
+        [Test]
+        public void ReturnsJson()
+        {
+            var mock = Substitute.For<ICanAnswerPingRequest> ();
+            mock.Response().Returns(new { any = "value" });
+            controller.Worker = mock;
 
-			Assert.That(controller.Index(), Is.InstanceOf<JsonResult>());
-		}
+            Assert.That(controller.Index(), Is.InstanceOf<JsonResult>());
+        }
 
-		[Test]
-		public void UsesThePingImplementation()
-		{
-			Assert.That (controller.Worker, Is.InstanceOf<Pong> ());
-		}
+        [Test]
+        public void UsesThePingImplementation()
+        {
+            Assert.That (controller.Worker, Is.InstanceOf<Pong> ());
+        }
     }
 }

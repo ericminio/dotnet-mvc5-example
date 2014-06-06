@@ -160,5 +160,16 @@ Global
 		$27.MessageStyle = $28
 		$28.LineAlign = 0
 		$27.inheritsSet = Mono
+		$0.TextStylePolicy = $29
+		$29.FileWidth = 120
+		$29.inheritsSet = VisualStudio
+		$29.inheritsScope = text/plain
+		$29.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $30
+		$30.ElseIfNewLinePlacement = SameLine
+		$30.AfterDelegateDeclarationParameterComma = True
+		$30.inheritsSet = Mono
+		$30.inheritsScope = text/x-csharp
+		$30.scope = text/x-csharp
 	EndGlobalSection
 EndGlobal
