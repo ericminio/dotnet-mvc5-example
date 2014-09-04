@@ -2,7 +2,7 @@ namespace Yose.PingChallenge
 {
     public class Pong : ICanAnswerPingRequest
     {
-        public object Response ()
+        public AliveResponse Response ()
         {
             return new AliveResponse { alive = true };
         }

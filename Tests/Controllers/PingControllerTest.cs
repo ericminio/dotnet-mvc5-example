@@ -31,7 +31,7 @@ namespace Tests
         public void ReturnsJson()
         {
             var mock = Substitute.For<ICanAnswerPingRequest> ();
-            mock.Response().Returns(new { any = "value" });
+            mock.Response().Returns(new AliveResponse());
             controller.Worker = mock;
 
             Assert.That(controller.Index(), Is.InstanceOf<JsonResult>());
