@@ -1,4 +1,4 @@
-ftp -v ftp://ericminio-001:Yose12345@ftp.mywindowshosting.com <<-ENDTAG
+ftp -v ftp://ericmvc5-001:Yose12345@ftp.mywindowshosting.com <<-ENDTAG
 binary
 prompt
 cd site1
