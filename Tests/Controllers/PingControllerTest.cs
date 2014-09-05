@@ -20,25 +20,23 @@ namespace Tests
         [Test]
         public void AsksForHelpToSomeoneWoCanAnswerPing()
         {
-            var mock = Substitute.For<ICanAnswerPingRequest> ();
-            controller.Worker = mock;
+            controller.Worker = Substitute.For<ICanAnswerPingRequest> ();
             controller.Index();
 
-            mock.Received().Response();
+            controller.Worker.Received().Response();
         }
 
         [Test]
         public void ReturnsJson()
         {
-            var mock = Substitute.For<ICanAnswerPingRequest> ();
-            mock.Response().Returns(new AliveResponse());
-            controller.Worker = mock;
+            controller.Worker = Substitute.For<ICanAnswerPingRequest> ();;
+            controller.Worker.Response().Returns(new AliveResponse());
 
             Assert.That(controller.Index(), Is.InstanceOf<JsonResult>());
         }
 
         [Test]
-        public void UsesThePingImplementation()
+        public void UsesThePingImplementationInProduction()
         {
             Assert.That (controller.Worker, Is.InstanceOf<Pong> ());
         }
