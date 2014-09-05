@@ -4,7 +4,7 @@ namespace Yose.PingChallenge
     {
         public AliveResponse Response ()
         {
-            return new AliveResponse { alive = true };
+            return new AliveResponse();
         }
     }
 }

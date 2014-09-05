@@ -80,6 +80,7 @@
     <Compile Include="TddReadyTest.cs" />
     <Compile Include="Controllers\PingControllerTest.cs" />
     <Compile Include="PingChallenge\PingTest.cs" />
+    <Compile Include="PingChallenge\AliveResponseTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

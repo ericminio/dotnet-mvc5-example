@@ -19,13 +19,5 @@ namespace Tests.PingChallenge
         {
             Assert.That (ping.Response(), Is.InstanceOf<AliveResponse> ());
         }
-
-        [Test]
-        public void ReturnsTheExpectedAliveResponse()
-        {
-            var response = (AliveResponse)ping.Response();
-
-            Assert.That (response.alive);
-        }
     }
 }
