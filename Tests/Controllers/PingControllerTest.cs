@@ -9,36 +9,42 @@ namespace Tests
     [TestFixture]
     public class PingControllerTest
     {
-        PingController controller;
+        PingController decorator;
 
         [SetUp]
-        public void ThisController()
+        public void ThisDecorator()
         {
-            controller = new PingController();
+            decorator = new PingController();
         }
 
         [Test]
-        public void AsksForHelpToSomeoneWoCanAnswerPing()
+        public void DecoratesAWorkerThatCanAnswerAPingRequest()
         {
-            controller.Worker = Substitute.For<ICanAnswerPingRequest> ();
-            controller.Index();
+            decorator.Worker = Substitute.For<ICanAnswerPingRequest> ();
+            decorator.Index();
 
-            controller.Worker.Received().Response();
+            decorator.Worker.Received().Response();
         }
 
         [Test]
         public void ReturnsJson()
         {
-            controller.Worker = Substitute.For<ICanAnswerPingRequest> ();;
-            controller.Worker.Response().Returns(new AliveResponse());
+            decorator.Worker = Substitute.For<ICanAnswerPingRequest> ();;
+            decorator.Worker.Response().Returns(new AliveResponse());
 
-            Assert.That(controller.Index(), Is.InstanceOf<JsonResult>());
+            Assert.That(decorator.Index(), Is.InstanceOf<JsonResult>());
         }
 
         [Test]
-        public void UsesThePingImplementationInProduction()
+        public void UsesThePongImplementationInProduction()
         {
-            Assert.That (controller.Worker, Is.InstanceOf<Pong> ());
+            Assert.That (decorator.Worker, Is.InstanceOf<Pong> ());
+        }
+
+        [Test]
+        public void DecoratesThePongServiceInOrderToBeUsedInsideAnMvcApplication()
+        {
+            Assert.That (decorator, Is.InstanceOf<Controller> ());
         }
     }
 }
