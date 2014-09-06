@@ -6,4 +6,6 @@ TestResults/
 test-results
 *.userprefs
 TestResult.xml
+packages
+.nuget
 

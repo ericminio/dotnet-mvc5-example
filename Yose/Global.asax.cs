@@ -1,19 +1,23 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
+using System.Web.Http;
+using System.Net.Http;
 
 namespace Yose
 {
     public class MvcApplication : System.Web.HttpApplication
     {
-        public static void RegisterRoutes(RouteCollection routes)
+        public static void RegisterRoutes(HttpConfiguration config)
         {
-            routes.MapRoute("Ping", "ping", new { controller = "Ping", action = "Index" });
+            config.Routes.MapHttpRoute(
+                name: "Default",
+                routeTemplate: "{controller}");
         }
 
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-            RegisterRoutes(RouteTable.Routes);
+            GlobalConfiguration.Configure (RegisterRoutes);
         }
     }
 }
