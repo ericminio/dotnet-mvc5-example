@@ -3,4 +3,5 @@
 Implementing the challenges of [Yose the game](http://yosethegame.com) with MVC5
 
 Working software over comprehensive readme:
-* [Ping](http://ericmvc5-001-site1.mywindowshosting.com/ping)
+* [First Web service challenge](http://ericmvc5-001-site1.mywindowshosting.com/ping)
+* [First Web page challenge](http://ericmvc5-001-site1.mywindowshosting.com)
