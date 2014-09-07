@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using System.Web.UI.WebControls;
 using System.Text;
 using System.IO;
+using System.Web;
 
 namespace Yose
 {
@@ -14,11 +15,25 @@ namespace Yose
     {
         public HttpResponseMessage Get()
         {
-            var html = File.ReadAllText ("HelloYoseChallenge/home.html");
             return new HttpResponseMessage () {
-                Content = new StringContent(html, Encoding.UTF8,  "text/html")
+                Content = new StringContent(GetHomePageContent(), Encoding.UTF8,  "text/html")
             };
+        }
+
+        public string GetHomePageContent ()
+        {
+            string result = string.Empty;
+
+            using (Stream stream = typeof(HomeController).Assembly
+                   .GetManifestResourceStream("Yose.HelloYoseChallenge.home.html"))
+            {
+                using (StreamReader sr = new StreamReader(stream))
+                {
+                    result = sr.ReadToEnd();
+                }
+            }
+            return result;
+
         }
     }
 }
-

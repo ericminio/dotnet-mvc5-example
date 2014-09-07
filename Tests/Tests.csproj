@@ -97,10 +97,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TddReadyTest.cs" />
     <Compile Include="PingChallenge\AliveResponseTest.cs" />
     <Compile Include="PingChallenge\PingChallengeTest.cs" />
     <Compile Include="HelloYoseChallenge\HelloYoseChallengeTest.cs" />
+    <Compile Include="HelloYoseChallenge\HomeControllerTest.cs" />
+    <Compile Include="HelloYoseChallenge\HomePageResourceTest.cs" />
+    <Compile Include="Sandbox\NUnit.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -112,8 +114,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\" />
     <Folder Include="PingChallenge\" />
     <Folder Include="HelloYoseChallenge\" />
+    <Folder Include="Sandbox\" />
   </ItemGroup>
 </Project>
