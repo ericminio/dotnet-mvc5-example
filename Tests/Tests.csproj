@@ -100,6 +100,7 @@
     <Compile Include="TddReadyTest.cs" />
     <Compile Include="PingChallenge\AliveResponseTest.cs" />
     <Compile Include="PingChallenge\PingChallengeTest.cs" />
+    <Compile Include="HelloYoseChallenge\HelloYoseChallengeTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -113,5 +114,6 @@
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="PingChallenge\" />
+    <Folder Include="HelloYoseChallenge\" />
   </ItemGroup>
 </Project>

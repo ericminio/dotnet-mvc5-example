@@ -9,9 +9,17 @@ namespace Yose
     {
         public static void RegisterRoutes(HttpConfiguration config)
         {
-            config.Routes.MapHttpRoute(
+            config.Routes.MapHttpRoute (
                 name: "Default",
-                routeTemplate: "{controller}");
+                routeTemplate: "{controller}",
+
+                defaults: new
+                {
+                    controller = "Home",
+                    action = "Get",
+                    id = UrlParameter.Optional
+                }
+            );
         }
 
         protected void Application_Start()
