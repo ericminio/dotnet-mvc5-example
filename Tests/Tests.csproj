@@ -118,6 +118,7 @@
     <Compile Include="Sandbox\NUnit.cs" />
     <Compile Include="Support\WebTest.cs" />
     <Compile Include="PortfolioChallenge\PortfolioPingChallengeTest.cs" />
+    <Compile Include="HomePageTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
