@@ -9,19 +9,13 @@ using System.Net;
 namespace Tests
 {
     [TestFixture]
-    public class HelloYoseChallengeTest
+    public class HelloYoseChallengeTest : WebTest
     {
         HttpResponseMessage response;
 
         [SetUp]
         public void TheHelloYoseChallenge() 
         {
-            var config = new HttpConfiguration();                       
-            MvcApplication.RegisterRoutes (config);
-            var server = new HttpServer(config);
-
-            var client = new HttpClient(server);
-
             client.DefaultRequestHeaders.Accept.Add (new MediaTypeWithQualityHeaderValue ("application/xml"));
             response = client.GetAsync ("http://localhost").Result;
         }

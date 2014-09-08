@@ -11,19 +11,13 @@ using Fizzler.Systems.HtmlAgilityPack;
 namespace Tests
 {
     [TestFixture]
-    public class PortfolioPingChallengeTest
+    public class PortfolioPingChallengeTest : WebTest
     {
         HttpResponseMessage response;
 
         [SetUp]
         public void TheHelloYoseChallenge() 
         {
-            var config = new HttpConfiguration();                       
-            MvcApplication.RegisterRoutes (config);
-            var server = new HttpServer(config);
-
-            var client = new HttpClient(server);
-
             client.DefaultRequestHeaders.Accept.Add (new MediaTypeWithQualityHeaderValue ("application/xml"));
             response = client.GetAsync ("http://localhost").Result;
         }
