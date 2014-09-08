@@ -116,8 +116,8 @@
     <Compile Include="HelloYoseChallenge\HomeControllerTest.cs" />
     <Compile Include="HelloYoseChallenge\HomePageResourceTest.cs" />
     <Compile Include="Sandbox\NUnit.cs" />
-    <Compile Include="Portfolio\PortfolioPingChallengeTest.cs" />
     <Compile Include="Support\WebTest.cs" />
+    <Compile Include="PortfolioChallenge\PortfolioPingChallengeTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -132,7 +132,7 @@
     <Folder Include="PingChallenge\" />
     <Folder Include="HelloYoseChallenge\" />
     <Folder Include="Sandbox\" />
-    <Folder Include="Portfolio\" />
     <Folder Include="Support\" />
+    <Folder Include="PortfolioChallenge\" />
   </ItemGroup>
 </Project>
