@@ -10,7 +10,7 @@ namespace Tests
     {
         protected HttpClient client;
 
-        [SetUp]
+        [TestFixtureSetUp]
         public void ConnectTotheServer ()
         {
             var config = new HttpConfiguration();                       
