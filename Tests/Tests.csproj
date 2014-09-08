@@ -95,6 +95,19 @@
     <Reference Include="System.Web.Http">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.2\lib\net45\System.Web.Http.dll</HintPath>
     </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.8\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Fizzler">
+      <HintPath>..\packages\Fizzler.0.9.3\lib\net35\Fizzler.dll</HintPath>
+    </Reference>
+    <Reference Include="Fizzler.Sandbox">
+      <HintPath>..\packages\Fizzler.0.9.3\lib\net35\Fizzler.Sandbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Fizzler.Systems.HtmlAgilityPack">
+      <HintPath>..\packages\Fizzler.0.9.3\lib\net35\Fizzler.Systems.HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PingChallenge\AliveResponseTest.cs" />
@@ -103,6 +116,7 @@
     <Compile Include="HelloYoseChallenge\HomeControllerTest.cs" />
     <Compile Include="HelloYoseChallenge\HomePageResourceTest.cs" />
     <Compile Include="Sandbox\NUnit.cs" />
+    <Compile Include="Portfolio\PortfolioPingChallengeTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -117,5 +131,6 @@
     <Folder Include="PingChallenge\" />
     <Folder Include="HelloYoseChallenge\" />
     <Folder Include="Sandbox\" />
+    <Folder Include="Portfolio\" />
   </ItemGroup>
 </Project>
